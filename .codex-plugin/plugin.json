@@ -1,0 +1,25 @@
+{
+  "name": "pstack",
+  "version": "1.1.0",
+  "description": "poteto's engineering skills for rigorous AI-assisted development",
+  "author": {
+    "name": "Andrei Iurchenkov",
+    "email": "andrei@iurchenkov.com",
+    "url": "https://github.com/painhardcore"
+  },
+  "repository": "https://github.com/painhardcore/pstack",
+  "license": "MIT",
+  "keywords": ["ai", "skills", "engineering", "pstack", "poteto"],
+  "skills": "./skills",
+  "interface": {
+    "displayName": "pstack",
+    "shortDescription": "Rigorous engineering skills for Codex",
+    "longDescription": "Portable skills for disciplined AI-assisted engineering work.",
+    "developerName": "Andrei Iurchenkov",
+    "category": "Developer Tools",
+    "capabilities": ["Skills"],
+    "websiteURL": "https://github.com/painhardcore/pstack",
+    "defaultPrompt": ["Use poteto-mode to review this repository."],
+    "brandColor": "#1F2937"
+  }
+}
