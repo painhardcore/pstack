@@ -1,105 +1,45 @@
 # Typographie française
 
-Dernière passe d'un texte, mécanique. Les règles décrivent l'usage de France.
+Usage de France. Une seule convention par texte : ne mélange ni guillemets français et droits, ni deux sortes de tirets, ni apostrophe droite et courbe.
 
-Une règle domine toutes les autres : **une seule convention par texte**. Ne mélange pas guillemets français et droits, ni deux sortes de tirets pour la même fonction, ni apostrophe droite et courbe.
+## Espaces
 
-## Espaces insécables
-
-Deux caractères à connaître :
-
-| Caractère | Nom | Usage |
-|---|---|---|
-| U+00A0 | espace insécable | par défaut, partout, y compris HTML (`&nbsp;`) et courriel |
-| U+202F | espace fine insécable | avant `;` `!` `?` quand le support et la police le gèrent (édition, web soigné) |
-
-L'espace ordinaire ne convient pas aux endroits ci-dessous, parce qu'elle laisse le signe tomber seul au début de la ligne suivante. Dans un message de commit, un terminal ou du code, une espace ordinaire est tolérée.
-
-## Ponctuation et symboles
+L'espace insécable U+00A0 marche partout, y compris en HTML (`&nbsp;`) et dans un courriel. La fine insécable U+202F est plus soignée avant `;` `!` `?` quand la police la gère. Une espace ordinaire laisse le signe tomber seul en début de ligne.
 
 | Signe | Règle |
 |---|---|
-| `:` | espace insécable avant, espace après. Pas d'espace dans une heure numérique (13:52) |
-| `;` `!` `?` | espace insécable avant (fine si possible), espace après |
-| `.` `,` | pas d'espace avant, espace après |
-| `…` | un seul signe, pas d'espace avant, espace après |
-| `«` | espace avant, espace insécable après |
-| `»` | espace insécable avant, espace après |
-| `( )` `[ ]` | espace avant l'ouvrante, rien après. Rien avant la fermante, espace après |
-| `%` | espace insécable avant : `10 %` |
-| `€` | après le nombre, espace insécable avant : `20 €`, `785,60 €`. Pas de « 785 € 60 » |
-| symboles d'unité | espace insécable avant : `5 kg`, `20 °C` |
-| apostrophe | aucune espace de part et d'autre |
+| `:` | insécable avant, espace après. Rien dans une heure numérique (13:52) |
+| `;` `!` `?` | insécable avant (fine si possible), espace après |
+| `«` `»` | espace avant `«` et insécable après. Insécable avant `»` et espace après |
+| `( )` | espace avant l'ouvrante, rien à l'intérieur |
+| `…` | un seul signe, rien avant |
+| `%`, `€`, unités | insécable avant : `10 %`, `785,60 €`, `5 kg`, `20 °C` |
 
-Les guillemets internes à une citation sont les guillemets anglais : `« Il a dit “non” puis il est parti. »`. Ne mets pas d'espace insécable entre une apostrophe et un guillemet ouvrant.
+Guillemets dans une citation : `« Il a dit “non” puis il est parti. »`.
 
-## Guillemets et dialogue
+## Nombres, dates, heures
 
-- Citation : `« … »`. Jamais `"…"` ni `‘…’` dans un texte français.
-- Dialogue de roman : un tiret cadratin ouvre chaque réplique, sans guillemets en plus. Beaucoup d'éditeurs emploient un demi-cadratin à la place. Choisis-en un et tiens-le.
-
-## Tirets
-
-Il existe quatre signes :
-
-| Signe | Caractère | Emploi |
-|---|---|---|
-| trait d'union | `-` | mots composés (peut-être), inversions (a-t-il) |
-| demi-cadratin | `–` (U+2013) | plages (1914–1918), liaisons (Paris–Lyon). Aussi incises et dialogues chez certains éditeurs |
-| cadratin | `—` (U+2014) | dialogues. Incises, dans la tradition |
-| signe moins | `−` (U+2212) | mathématiques |
-
-L'incise entre tirets est correcte en français. Ce qui trahit un texte d'IA, c'est le nombre : un tiret d'incise par paragraphe, souvent collé à « et » ou à « c'est ». Dans un texte de non-fiction à nettoyer, remplace-les par une virgule, un deux-points ou une nouvelle phrase, et ne remplace pas la série par une série de parenthèses. En fiction, un tiret isolé et voulu peut rester. Dans tous les cas, n'emploie pas deux conventions différentes pour la même situation dans un même texte.
-
-## Nombres, unités, dates, heures
-
-| Sujet | Règle | Exemple |
-|---|---|---|
-| séparateur de milliers | espace insécable au-delà de trois chiffres | `12 345`, `1 000` |
-| décimale | virgule | `3,5` |
-| numéros (année, page, code postal, matricule) | pas de séparateur | `2026`, `75008` |
-| milliard | en toutes lettres | « deux milliards d'euros » |
-| ordinaux | `1er`, `1re`, `2e`, `3e`, `Ier`, `XXIe siècle` | jamais « 1ère », jamais « 2ème » |
-| heures | `13 h 17`, `15 heures`, sans zéro devant les nombres inférieurs à dix | `2 h 5` |
-| dates | jour en chiffres, mois en lettres et en minuscule | `le 5 mars 2026`, `le 1er mai` |
-| jours et mois | minuscule | lundi, octobre |
-| siècles | chiffres romains suivis de `e` | `le XXIe siècle` |
-| pourcentage | espace insécable avant `%` | `50 %` |
-| téléphone (France) | par paires | `01 23 45 67 89` |
-
-Une date complète s'écrit sans majuscule (« le 14 juillet 1789 »). Le nom d'une fête en prend une (« le 14 Juillet », « le 1er Mai »).
+| Sujet | Règle |
+|---|---|
+| milliers | insécable au-delà de trois chiffres : `12 345`. Pas de séparateur dans une année ou un code postal |
+| décimales | virgule : `3,5` |
+| ordinaux | `1er`, `1re`, `2e`, `XXIe siècle`. Jamais « 1ère », « 2ème » |
+| heures | `13 h 17`, `15 heures` |
+| dates | `le 5 mars 2026`, `le 1er mai`. Mois et jours en minuscule |
+| milliard | en toutes lettres |
 
 ## Majuscules
 
-- **Accents sur les capitales.** Les majuscules s'écrivent avec leurs accents : À, É, È, Ç, Œ. Leur omission est une faute d'orthographe.
-- **Titres de section** et intertitres : casse de phrase. Première lettre et noms propres seulement.
-- **Titres d'œuvres** : en italique. Majuscule au premier mot et, si le titre commence par un article, au premier nom (*Le Rouge et le Noir*, *Les Misérables*). Pas de guillemets.
-- **Jours, mois, langues, adjectifs de nationalité** : minuscule (« lundi », « le français », « la cuisine italienne »). Le nom de l'habitant prend une majuscule (« un Italien »).
-- **Civilités** : `M.`, `Mme`, `MM.`, `Mmes`, devant un nom, pour parler d'un tiers. Jamais pour s'adresser à quelqu'un (« Monsieur » en toutes lettres). Jamais « Mr » ni « Mrs ».
-- **Appel et salutation** : Madame, Monsieur, Madame la Directrice en toutes lettres, avec une majuscule, sans abréviation.
+- Accents obligatoires sur les capitales : À, É, È, Ç, Œ.
+- Titres de section en casse de phrase.
+- Titres d'œuvres en italique, majuscule au premier mot, et au premier nom si le titre commence par un article : *Le Rouge et le Noir*.
+- Langues et adjectifs de nationalité en minuscule (« le français »), habitants avec majuscule (« un Français »).
+- `M.`, `Mme`, `MM.`, `Mmes` pour parler d'un tiers. On écrit « Monsieur » en toutes lettres à la personne à qui l'on s'adresse.
 
-## Ligatures
+## Divers
 
-`œ` et `æ` sont des lettres du français : cœur, sœur, œuvre, œuf, bœuf, nœud, vœu, chœur, œil, manœuvre. Écrire « coeur » est une faute. Quelques mots n'en prennent pas, parce que « o » et « e » n'y forment pas un seul son : coexister, coefficient, moelle, poêle.
-
-## Énumérations et abréviations
-
-- **Pas de virgule avant le « et » final** : « Paris, Lyon et Marseille ».
-- **Points-virgules** quand un élément contient lui-même des virgules.
-- **etc.** : après au moins deux éléments, précédé d'une virgule, jamais suivi de points de suspension ni utilisé après « comme » ou « tels que ».
-- **Abréviations** à éviter dans le corps du texte : c.-à-d., par ex., env. Écris « c'est-à-dire », « par exemple », « environ ».
-- **Listes à puces** : choisis un système et garde-le. Soit des fragments en minuscule avec point-virgule et point final, soit des phrases complètes avec majuscule et point.
-- **Numéro** : `n° 5` ou `no 5`. Choisis-en un.
-
-## Apostrophe
-
-L'apostrophe typographique `’` est la forme soignée en édition. L'apostrophe droite `'` convient au texte brut, au code, au courriel et aux messages de commit. Ne mélange jamais les deux dans un même texte. Les sorties de ChatGPT et de DeepSeek emploient souvent `’`, parfois de façon incohérente.
-
-## Italique, gras
-
-- Italique : titres d'œuvres, mots étrangers non intégrés, mot cité en tant que mot.
-- Gras : rare, pour la première mention d'un terme défini ou pour une consigne essentielle. Pas sur chaque nom propre.
-
-## Écriture inclusive
-
-Contestée en France (l'Académie française a mis en garde en 2017 contre une écriture jugée illisible) et usuelle dans d'autres contextes. Un skill de style ne tranche pas. Si le texte d'origine, le projet ou l'utilisateur emploie le point médian, les doublets ou le féminin des titres, garde la convention. S'ils ne l'emploient pas, n'en introduis pas. Ne mélange pas.
+- Ligatures : cœur, sœur, œuvre, œuf, bœuf, nœud, vœu. Sans ligature : coexister, coefficient, moelle.
+- « etc. » après au moins deux éléments, jamais suivi de `…`.
+- Pas de virgule avant le « et » final.
+- Tirets : trait d'union pour les mots composés, demi-cadratin pour les intervalles (1914–1918), cadratin pour le dialogue.
+- Apostrophe droite `'` en texte brut, code et courriel. Apostrophe courbe `’` en édition. Pas de mélange.
