@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+- Added `unslop-fr`, a French companion to `unslop`. It covers French AI tells, English calques, formal letters, and orthotypography, with references and a sources file that records what the research could not verify.
+- Added a `local` action to `upstream-policy.tsv` for skills with no upstream file. The sync now preserves them and refuses an upstream item that collides with one.
+- Pointed `unslop` and `poteto-mode` at `unslop-fr` for French prose.
+
 ## [1.1.0] - 2026-08-27
 
 - Replaced the failing `sed` adapter with an atomic, idempotent Python adapter and behavioral tests.

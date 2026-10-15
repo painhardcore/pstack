@@ -2,7 +2,7 @@
 
 pstack is a portable adaptation of [Cursor's pstack plugin](https://github.com/cursor/plugins/tree/main/pstack) for Codex, Claude Code, and OpenCode.
 
-The distribution contains 41 skills, 19 playbooks, and host-specific agent definitions for Claude Code and OpenCode. Cursor-only workflows are intentionally omitted.
+The distribution contains 42 skills, 19 playbooks, and host-specific agent definitions for Claude Code and OpenCode. Cursor-only workflows are intentionally omitted.
 
 ## Install
 
@@ -42,15 +42,17 @@ Install the [original plugin](https://github.com/cursor/plugins/tree/main/pstack
 
 ## What is included
 
-The 20 direct skills are:
+The 21 direct skills are:
 
 - `poteto-mode`, `how`, `why`, `recall`, `blast-radius`, `architect`
 - `arena`, `swarm`, `interrogate`, `teach`, `tdd`, `no-comments`
 - `typescript-best-practices`, `figure-it-out`, `show-me-your-work`
 - `create-verification-skill`, `maintain-verification-skill`
-- `unslop`, `bro`, `technical-writing`
+- `unslop`, `unslop-fr`, `bro`, `technical-writing`
 
 The other 21 skills are the `principle-*` rules used by those workflows.
+
+`unslop-fr` has no upstream counterpart. It applies `unslop` to French: AI patterns, English calques, formal letters, and French orthotypography. See `skills/unslop-fr/references/sources.md` for what the research supports and what it could not verify.
 
 The 19 playbooks cover investigation, bug fixing, performance, hillclimbing, runtime and trace forensics, features, refactoring, prototypes, visual parity, skill authoring, evals, pull-request babysitting, autonomous runs, session pickup, safe pauses, multi-phase plans, worktree cleanup, and opening pull requests.
 

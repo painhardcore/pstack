@@ -40,6 +40,7 @@ policy_action() {
 require_classification() {
     action=$(policy_action "$1" "$2")
     [ -n "$action" ] || { echo "error: unclassified upstream $1: $2" >&2; exit 1; }
+    [ "$action" != local ] || { echo "error: upstream now ships local $1: $2" >&2; exit 1; }
 }
 
 for path in "$SOURCE/skills"/*; do
@@ -58,6 +59,7 @@ done
 TAB=$(printf '\t')
 while IFS="$TAB" read -r kind name action; do
     [ "$kind" = "kind" ] && continue
+    [ "$action" = local ] && continue
     case "$kind" in
         skill) target="$SOURCE/skills/$name/SKILL.md" ;;
         playbook) target="$SOURCE/skills/poteto-mode/playbooks/$name.md" ;;

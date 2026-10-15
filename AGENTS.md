@@ -12,7 +12,7 @@ Use `pstack:poteto-mode` as the entry point for non-trivial engineering work.
 - `teach`, `tdd`, `no-comments`, and `typescript-best-practices` handle focused workflows.
 - `figure-it-out` and `show-me-your-work` handle large or auditable work.
 - `create-verification-skill` and `maintain-verification-skill` build project verification.
-- `technical-writing`, `unslop`, and `bro` shape communication.
+- `technical-writing`, `unslop`, `unslop-fr`, and `bro` shape communication. Use `unslop-fr` for any French prose.
 
 The 21 `principle-*` skills are loaded by direct skills when their rules affect a decision.
 

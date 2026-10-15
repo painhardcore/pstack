@@ -21,7 +21,7 @@ Route the task before acting:
 - Use **interrogate** for requested adversarial review.
 - Use **figure-it-out** for a large cross-cutting effort that no narrower playbook fits.
 - Use **show-me-your-work** for a long or multi-phase run that needs a decision trail.
-- Use **technical-writing** for documentation and **unslop** for every prose result.
+- Use **technical-writing** for documentation and **unslop** for every prose result. Add **unslop-fr** when the prose is French.
 
 If the user or host prohibits subagents, run the same steps inline. Keep the skipped delegation step in the task list with its reason. Never stop solely because one optional host capability is absent.
 

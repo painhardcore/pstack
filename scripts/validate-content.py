@@ -106,7 +106,7 @@ def policy_entries(path: Path) -> dict[tuple[str, str], str]:
         if len(parts) != 3:
             raise ValueError(f"bad upstream-policy.tsv row {number}")
         kind, name, action = parts
-        if kind not in {"skill", "playbook", "agent"} or action not in {"sync", "adapt", "skip"}:
+        if kind not in {"skill", "playbook", "agent"} or action not in {"sync", "adapt", "skip", "local"}:
             raise ValueError(f"bad upstream-policy.tsv row {number}")
         key = (kind, name)
         if key in entries:

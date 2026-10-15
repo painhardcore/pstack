@@ -38,7 +38,7 @@ All delegation skills include an inline fallback. A host without subagents or pe
 - Use `swarm` for independent coverage slices.
 - Use `tdd` for a cheap local regression test.
 - Use `create-verification-skill` when the project lacks a user-level verification workflow.
-- Use `no-comments`, `technical-writing`, and `unslop` before review.
+- Use `no-comments`, `technical-writing`, and `unslop` before review. Add `unslop-fr` when the text is French.
 
 External actions still require authority. A request to edit or review does not authorize a push, pull request, merge, deployment, message, or ticket update.
 

@@ -11,6 +11,7 @@ WORK="$FIXTURE/work"
 mkdir -p "$UPSTREAM/pstack" "$WORK"
 rsync -a --exclude='.git' "$ROOT/" "$UPSTREAM/pstack/"
 rsync -a --exclude='.git' "$ROOT/" "$WORK/"
+rm -rf "$UPSTREAM/pstack/skills/unslop-fr"
 
 for name in automate-me reflect setup-pstack; do
     mkdir -p "$UPSTREAM/pstack/skills/$name"
@@ -38,7 +39,26 @@ grep -q '^name: bro$' "$WORK/skills/bro/SKILL.md"
 ! grep -q 'ADAPT_ENTRY_MUST_NOT_OVERWRITE' "$WORK/skills/how/SKILL.md"
 [ ! -e "$WORK/skills/setup-pstack" ]
 [ ! -e "$WORK/skills/poteto-mode/playbooks/shipping.md" ]
+[ -f "$WORK/skills/unslop-fr/SKILL.md" ]
+[ -f "$WORK/skills/unslop-fr/references/typographie.md" ]
 diff -rq "$WORK/skills" "$WORK/.opencode/skills" >/dev/null
+
+mkdir -p "$UPSTREAM/pstack/skills/unslop-fr"
+printf '%s\n' '---' 'name: unslop-fr' 'description: Upstream collision.' '---' 'UPSTREAM_LOCAL_COLLISION' > "$UPSTREAM/pstack/skills/unslop-fr/SKILL.md"
+git -C "$UPSTREAM" add pstack
+git -C "$UPSTREAM" commit --quiet -m local-collision
+printf '%s\n' "$(git -C "$UPSTREAM" rev-parse HEAD)" > "$WORK/UPSTREAM_COMMIT"
+
+if PSTACK_UPSTREAM_REPO="$UPSTREAM" PSTACK_SKIP_FULL_CHECK=1 sh "$WORK/scripts/sync-upstream.sh" >/dev/null 2>&1; then
+    echo 'sync accepted an upstream skill that policy marks local' >&2
+    exit 1
+fi
+! grep -q 'UPSTREAM_LOCAL_COLLISION' "$WORK/skills/unslop-fr/SKILL.md"
+
+rm -rf "$UPSTREAM/pstack/skills/unslop-fr"
+git -C "$UPSTREAM" add pstack
+git -C "$UPSTREAM" commit --quiet -m local-collision-removed
+printf '%s\n' "$(git -C "$UPSTREAM" rev-parse HEAD)" > "$WORK/UPSTREAM_COMMIT"
 
 mkdir -p "$UPSTREAM/pstack/skills/unclassified"
 printf '%s\n' '---' 'name: unclassified' 'description: New upstream skill.' '---' > "$UPSTREAM/pstack/skills/unclassified/SKILL.md"

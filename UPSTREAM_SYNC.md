@@ -9,8 +9,9 @@ This repository tracks one reviewed revision of [cursor/plugins/pstack](https://
 - `sync` copies a host-neutral skill automatically.
 - `adapt` preserves the local portable version for manual comparison.
 - `skip` removes a Cursor-only skill or playbook from the distribution.
+- `local` marks a skill that exists only in this repository, such as `unslop-fr`. The sync leaves it untouched and stops if upstream starts shipping an item with the same name.
 
-The sync stops before changing live files when upstream adds or removes an unclassified skill, playbook, or agent.
+The sync stops before changing live files when upstream adds or removes an unclassified skill, playbook, or agent, or adds an item that the policy marks `local`.
 
 ## Update the pin
 
@@ -55,7 +56,7 @@ kind	name	action
 skill	new-skill	adapt
 ```
 
-Choose `sync` only when the file contains no host-specific paths, commands, model identifiers, or tool syntax. Choose `skip` when the workflow cannot operate without Cursor-only infrastructure.
+Choose `sync` only when the file contains no host-specific paths, commands, model identifiers, or tool syntax. Choose `skip` when the workflow cannot operate without Cursor-only infrastructure. Choose `local` for a new skill that has no upstream file, and add its row in the same commit that adds the skill.
 
 ## Release checklist
 
