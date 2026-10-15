@@ -61,13 +61,13 @@ Dans un message de commit ou du code, une espace ordinaire suffit. Le détail (n
 
 ## Courrier
 
-Le courrier français est formulaire. Garde la formule attendue, une fois, et coupe l'empilement.
+Le courrier français est formulaire. Garde la formule attendue, une fois, et coupe l'empilement. Ne retire pas la politesse attendue : un courrier trop sec passe pour impoli.
 
-- Ouvre sur l'objet (« Je vous écris au sujet de… »), pas sur « J'espère que vous allez bien » ni « Je me permets de revenir vers vous ».
+- Ouvre sur l'objet. « Je vous écris au sujet de… » et « Je me permets de vous écrire au sujet de… » sont polis. « J'espère que vous allez bien » (calque de l'anglais) et « Je me permets de revenir vers vous » (jargon de bureau) sonnent faux.
 - La formule finale reprend l'appel : « Madame la Directrice, » appelle « Je vous prie d'agréer, Madame la Directrice, l'expression de ma considération distinguée. »
 - Une seule formule de politesse, pas « Restant à votre disposition… Dans l'attente de votre retour… Veuillez agréer… ».
 - « Espérant une réponse rapide, je vous prie d'agréer… » : le sujet du participe est « je ». « Espérant…, veuillez agréer » est fautif.
-- Dans un courriel, « Cordialement, » suffit.
+- Dans un courriel, « Cordialement, » est neutre et « Bien cordialement, » plus chaleureux. À quelqu'un qu'on connaît peu et à qui l'on demande un service, la formule longue reste juste.
 - Une lettre de motivation contient un fait sur l'employeur et une réalisation chiffrée du candidat. Pas de « Fort de mon expérience », « passionné », « dynamique et motivé ».
 
 ## Exemple
