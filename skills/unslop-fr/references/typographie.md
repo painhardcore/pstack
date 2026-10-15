@@ -1,6 +1,6 @@
 # Typographie française
 
-Dernière passe d'un texte, mécanique. Les règles décrivent l'usage de France. Là où le Québec diffère (OQLF), la colonne de droite le dit. Un texte belge ou suisse suit en général l'usage français pour les espaces.
+Dernière passe d'un texte, mécanique. Les règles décrivent l'usage de France.
 
 Une règle domine toutes les autres : **une seule convention par texte**. Ne mélange pas guillemets français et droits, ni deux sortes de tirets pour la même fonction, ni apostrophe droite et courbe.
 
@@ -17,20 +17,19 @@ L'espace ordinaire ne convient pas aux endroits ci-dessous, parce qu'elle laisse
 
 ## Ponctuation et symboles
 
-| Signe | France | Québec (OQLF) |
-|---|---|---|
-| `:` | espace insécable avant, espace après. Pas d'espace dans une heure numérique (13:52) | idem |
-| `;` `!` `?` | espace insécable avant (fine si possible), espace après | pas d'espace avant (recommandé). Une espace fine est acceptée |
-| `.` `,` | pas d'espace avant, espace après | idem |
-| `…` | un seul signe, pas d'espace avant, espace après | idem |
-| `«` | espace avant, espace insécable après | idem |
-| `»` | espace insécable avant, espace après | idem |
-| `( )` `[ ]` | espace avant l'ouvrante, rien après. Rien avant la fermante, espace après | idem |
-| `%` | espace insécable avant : `10 %` | idem |
-| `€` `$` | après le nombre, espace insécable avant : `20 €`, `785,60 €`. Pas de « 785 € 60 » | idem, `10 $` |
-| symboles d'unité | espace insécable avant : `5 kg`, `20 °C` | idem |
-| `&`, `§` | espace avant, espace insécable après | idem |
-| apostrophe | aucune espace de part et d'autre | idem |
+| Signe | Règle |
+|---|---|
+| `:` | espace insécable avant, espace après. Pas d'espace dans une heure numérique (13:52) |
+| `;` `!` `?` | espace insécable avant (fine si possible), espace après |
+| `.` `,` | pas d'espace avant, espace après |
+| `…` | un seul signe, pas d'espace avant, espace après |
+| `«` | espace avant, espace insécable après |
+| `»` | espace insécable avant, espace après |
+| `( )` `[ ]` | espace avant l'ouvrante, rien après. Rien avant la fermante, espace après |
+| `%` | espace insécable avant : `10 %` |
+| `€` | après le nombre, espace insécable avant : `20 €`, `785,60 €`. Pas de « 785 € 60 » |
+| symboles d'unité | espace insécable avant : `5 kg`, `20 °C` |
+| apostrophe | aucune espace de part et d'autre |
 
 Les guillemets internes à une citation sont les guillemets anglais : `« Il a dit “non” puis il est parti. »`. Ne mets pas d'espace insécable entre une apostrophe et un guillemet ouvrant.
 
@@ -104,15 +103,3 @@ L'apostrophe typographique `’` est la forme soignée en édition. L'apostrophe
 ## Écriture inclusive
 
 Contestée en France (l'Académie française a mis en garde en 2017 contre une écriture jugée illisible) et usuelle dans d'autres contextes. Un skill de style ne tranche pas. Si le texte d'origine, le projet ou l'utilisateur emploie le point médian, les doublets ou le féminin des titres, garde la convention. S'ils ne l'emploient pas, n'en introduis pas. Ne mélange pas.
-
-## Variantes du français
-
-| Domaine | France | Québec | Belgique, Suisse |
-|---|---|---|---|
-| e-mail | courriel ou mail | courriel | courriel, mail |
-| fin de semaine | week-end | fin de semaine | week-end |
-| 70, 90 | soixante-dix, quatre-vingt-dix | idem | septante, nonante (huitante dans certains cantons suisses) |
-| repas du soir | dîner | souper | souper |
-| titres | « Madame la Ministre » | « Madame la Ministre » | « Madame la Ministre » |
-
-Ne remplace jamais un mot de l'une de ces variétés par celui de l'autre. Une étude canadienne rapportée par la RTBF note que les modèles généralistes transfèrent mal leurs acquis au français québécois : relis les mots régionaux avec soin au lieu de les normaliser.

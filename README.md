@@ -52,7 +52,7 @@ The 21 direct skills are:
 
 The other 21 skills are the `principle-*` rules used by those workflows.
 
-`unslop-fr` has no upstream counterpart. It applies `unslop` to French: AI patterns, English calques, formal letters, and French orthotypography. See `skills/unslop-fr/references/sources.md` for what the research supports and what it could not verify.
+`unslop-fr` has no upstream counterpart. It applies `unslop` to French as written in France: AI patterns, English calques, formal letters, and French orthotypography. See `skills/unslop-fr/references/sources.md` for what the research supports and what it could not verify.
 
 The 19 playbooks cover investigation, bug fixing, performance, hillclimbing, runtime and trace forensics, features, refactoring, prototypes, visual parity, skill authoring, evals, pull-request babysitting, autonomous runs, session pickup, safe pauses, multi-phase plans, worktree cleanup, and opening pull requests.
 

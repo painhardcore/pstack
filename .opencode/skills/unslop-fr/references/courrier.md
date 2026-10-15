@@ -20,7 +20,7 @@ Dans un courriel, l'expéditeur, le destinataire, la date et l'objet sont dans l
 
 ## Appel
 
-La Banque de dépannage linguistique de l'OQLF donne les règles : l'appel s'écrit contre la marge gauche, suivi d'une virgule. Les titres de civilité y prennent une majuscule et ne s'abrègent pas.
+L'appel s'écrit contre la marge gauche, suivi d'une virgule. Les titres de civilité y prennent une majuscule et ne s'abrègent pas : « M. » et « Mme » ne servent qu'à parler d'un tiers, jamais à s'adresser à quelqu'un.
 
 | Cas | Appel |
 |---|---|
@@ -34,30 +34,23 @@ La Banque de dépannage linguistique de l'OQLF donne les règles : l'appel s'é
 
 ## Formule de salutation
 
-**Elle reprend l'appel**, entre virgules, et se termine par un point (OQLF). Une lettre qui s'ouvre sur « Madame la Directrice, » se ferme sur « Je vous prie d'agréer, Madame la Directrice, l'expression de ma considération distinguée. »
+**Elle reprend l'appel**, entre virgules, et se termine par un point. Une lettre qui s'ouvre sur « Madame la Directrice, » se ferme sur « Je vous prie d'agréer, Madame la Directrice, l'expression de ma considération distinguée. »
 
-Le verbe monte en déférence :
+Formules d'usage, d'une lettre administrative ordinaire à une lettre adressée à une autorité. Ce sont des habitudes de langue, pas une norme :
 
-1. Recevez, Agréez
-2. Veuillez recevoir, Veuillez agréer
-3. Je vous prie de recevoir, Je vous prie d'agréer
-
-La fin se choisit selon le destinataire (OQLF) :
-
-| Destinataire | Fins possibles |
+| Situation | Formule |
 |---|---|
-| subordonné | mes plus cordiales salutations, l'assurance de ma considération distinguée |
-| même niveau | mes salutations distinguées, mes plus cordiales salutations, l'assurance de ma considération distinguée |
-| relation d'affaires | mes plus cordiales salutations, mes salutations distinguées |
-| autorité (ministre, élu) | l'expression de ma considération respectueuse, l'expression de ma haute considération, l'assurance de ma considération distinguée |
+| lettre administrative ou commerciale ordinaire | « Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées. » |
+| destinataire en position d'autorité | « Je vous prie d'agréer, Madame la Directrice, l'expression de ma considération distinguée. » |
+| destinataire à qui l'on doit du respect | « Je vous prie de recevoir, Madame la Directrice, mes respectueuses salutations. » |
 
-Trois précisions :
+Une formule trop courte dans un courrier formel peut passer pour un manque d'égards.
+
+Une précision de grammaire :
 
 - **Le sujet du participe est « je ».** « Espérant une réponse favorable, je vous prie d'agréer… » est correct. « Espérant une réponse favorable, veuillez agréer… » ne l'est pas, parce que le sujet de « espérant » (je) n'est pas celui de « veuillez » (vous).
-- **« l'expression de mes salutations distinguées ».** Cette forme est entrée dans l'usage courant en France. L'OQLF recommande plutôt « mes salutations distinguées » sans « l'expression de ». Suis la variété du texte et ne « corrige » pas un texte qui suit l'usage de sa région.
-- **« sentiments »** convient à la correspondance personnelle. En contexte professionnel, préfère « salutations », « considération » ou « respect ». Les formules en « hommage » sont démodées.
 
-Dans un courriel : « Cordialement, » est la fin neutre. « Bien cordialement, » est plus chaleureux. « Bien à vous, » et « Bonne journée, » conviennent entre collègues. « Sincèrement, » seul peut sonner comme une traduction de *Sincerely*. Pour une première prise de contact formelle, la formule longue reste de mise.
+Dans un courriel : « Cordialement, » est la fin neutre. « Bien cordialement, » est plus chaleureux. « Bien à vous, » et « Bonne journée, » conviennent entre collègues. La formule d'un courriel reste brève. Pour une première prise de contact formelle, la formule longue reste de mise.
 
 ## Ce que l'IA fait mal
 

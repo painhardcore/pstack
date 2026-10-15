@@ -1,6 +1,6 @@
 ---
 name: unslop-fr
-description: Cut AI tells and apply French typography to any prose written, rewritten, translated, or reviewed in French (copy, emails, letters, docs, posts, commit messages). Complements unslop with French patterns, English calques, and orthotypography. Pour tout texte en français, à appliquer avec unslop.
+description: Cut AI tells and apply French typography to any prose written, rewritten, translated, or reviewed in French as used in France (copy, emails, letters, docs, posts, commit messages). Complements unslop with French patterns, English calques, and orthotypography. Pour tout texte en français de France, à appliquer avec unslop.
 ---
 
 # Unslop FR
@@ -13,7 +13,7 @@ Le but n'est pas de passer un détecteur, qui se trompe souvent. Le but est un t
 
 ## Méthode
 
-1. **Cadrer.** Fixer avant d'écrire la variété de français (France par défaut, Québec, Belgique ou Suisse si le texte ou l'utilisateur l'indique), le registre (soutenu, courant, familier), le vouvoiement ou le tutoiement, le support (texte brut ou édition) et l'écriture inclusive ou non. En cas de doute : France, vouvoiement, registre courant soutenu. Ne convertis jamais une variété en une autre.
+1. **Cadrer.** Fixer avant d'écrire le registre (soutenu, courant, familier), le vouvoiement ou le tutoiement, le support (texte brut ou édition) et l'écriture inclusive ou non. En cas de doute : vouvoiement, registre courant soutenu. Écris en français de France.
 2. **Chercher le référent.** Pour chaque phrase : de quoi, de qui, quand, combien ? Sans réponse, c'est du remplissage. Coupe-la ou remplace-la par le fait. Si le fait manque, demande-le ou laisse une marque `[à préciser : …]`. N'invente jamais un chiffre, une source, une citation ou un cas client.
 3. **Réécrire depuis l'idée.** Ne remplace pas un mot par son voisin. « Crucial » devient « essentiel », puis « incontournable », et c'est toujours le même tic. Reformule la phrase autour de son vrai sujet. Garde le sens et le ton voulu.
 4. **Donner une voix** (section suivante).
@@ -108,10 +108,10 @@ Les listes complètes de mots, avec leur remplacement, sont dans [lexique](refer
 
 ## Typographie
 
-Dernière passe, mécanique. Le détail, les variantes (Québec, Belgique, Suisse) et les caractères à employer sont dans [typographie](references/typographie.md).
+Dernière passe, mécanique. Le détail et les caractères à employer sont dans [typographie](references/typographie.md).
 
 - **Guillemets.** `« texte »` avec une espace insécable à l'intérieur. Guillemets internes `“ ”`. Jamais `"…"` dans un texte français. Dialogue : tiret cadratin en début de réplique, sans guillemets en plus.
-- **Espaces avant `:` `;` `!` `?`.** En France, une espace insécable (U+00A0), ou fine insécable (U+202F) si le support le permet, jamais une espace ordinaire ni l'absence d'espace. Au Québec, l'OQLF recommande de ne pas mettre d'espace avant `;` `!` `?`, mais d'en mettre une avant `:`.
+- **Espaces avant `:` `;` `!` `?`.** Une espace insécable (U+00A0), ou fine insécable (U+202F) si le support le permet, jamais une espace ordinaire ni l'absence d'espace.
 - **Tiret.** Hors dialogue et fiction, n'utilise ni le tiret cadratin ni le demi-cadratin pour détacher une incise. Virgule, deux-points ou nouvelle phrase. Les parenthèses restent pour une précision brève (une date, un sigle), pas pour remplacer le tiret en série.
 - **Nombres.** `1 000` (espace insécable), `3,5` (virgule), `10 %`, `20 €`, `14 h 30`, `1er`, `1re`, `2e` (jamais « 2ème », jamais « 1ère »).
 - **Énumérations.** Pas de virgule avant le « et » final. « etc. » sans points de suspension, après au moins deux éléments. Points de suspension : un seul signe `…`, sans espace avant.
@@ -123,9 +123,9 @@ Dernière passe, mécanique. Le détail, les variantes (Québec, Belgique, Suiss
 
 Dans un message de commit, un terminal ou du code, une espace ordinaire est tolérée à la place de l'espace insécable.
 
-## Registres et variantes
+## Français de France
 
-Les règles ci-dessus décrivent le français de France. Un texte québécois, belge ou suisse garde ses mots (« courriel » au Québec, « septante » et « nonante » en Belgique et en Suisse, « souper » pour le repas du soir) et ses usages typographiques. Ne les « corrige » pas vers l'Hexagone. Un français qui sonne comme une traduction de l'anglais est aussi un tic en France, au Québec, en Belgique et en Suisse.
+Ce skill vise le français de France : orthographe, vocabulaire, typographie et conventions de courrier de l'Hexagone. N'emploie pas de mot propre au Québec, à la Belgique ou à la Suisse, sauf si l'utilisateur le demande. Un français qui sonne comme une traduction de l'anglais est un tic.
 
 ## Courrier
 
@@ -184,7 +184,7 @@ Après :
 2. Reste-t-il une ouverture de décor, une cheville, un faux contraste, une conclusion-résumé ?
 3. Les connecteurs en tête de paragraphe relient-ils quelque chose ?
 4. Un nom par chose, d'un bout à l'autre ?
-5. Le registre, le vouvoiement ou le tutoiement et la variété de français tiennent-ils jusqu'à la fin ?
+5. Le registre et le vouvoiement ou le tutoiement tiennent-ils jusqu'à la fin ?
 6. Une phrase sonne-t-elle comme une traduction de l'anglais ?
 7. La typographie est-elle passée : guillemets, espaces insécables, nombres, majuscules, tiret ?
 8. Un fait, une source ou une citation a-t-il été inventé en chemin ?

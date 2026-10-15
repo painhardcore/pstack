@@ -6,14 +6,12 @@ Recherche faite le 2026-10-15. Ce fichier dit ce que chaque partie du skill appu
 
 | Source | Appuie | Limites |
 |---|---|---|
-| [OQLF, espacement avant et après les signes de ponctuation et les symboles](https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles) | espaces autour de `: ; ! ? « » %`, usage québécois | décrit l'usage québécois, qui diffère de l'usage français sur `; ! ?` |
-| [OQLF, formules de salutation dans la lettre](https://vitrinelinguistique.oqlf.gouv.qc.ca/22101/la-redaction-et-la-communication/redaction-administrative-et-commerciale/correspondance/lettre/formules-de-salutation-dans-la-lettre) | reprise de l'appel, échelle de déférence, participe au sujet identique | norme québécoise. « l'expression de mes salutations » reste courant en France |
-| [OQLF, formules d'appel dans la lettre](https://vitrinelinguistique.oqlf.gouv.qc.ca/22099/la-redaction-et-la-communication/redaction-administrative-et-commerciale/correspondance/lettre/formules-dappel-dans-la-lettre) | majuscule et non-abréviation des civilités | idem |
+| [La langue française, formules de politesse](https://www.lalanguefrancaise.com/articles/formule-de-politesse-email-lettre-de-motivation) | exemples de lettres formelles qui reprennent l'appel dans la formule finale, courriel bref | site de langue, pas une source normative |
 | [Wikipédia, Conventions typographiques](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques) | nombres, ordinaux, heures, « etc. », énumérations, majuscules accentuées, civilités | source secondaire. La page s'appuie sur l'Imprimerie nationale sans la citer au mot près |
 | [Wikipédia, Tiret](https://fr.wikipedia.org/wiki/Tiret) | cadratin et demi-cadratin pour les incises et les dialogues, absence d'unanimité | source secondaire |
 | [Wikipedia, Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | structure du catalogue (emphase, copules, faux contraste, formatage, artefacts) | en anglais. Les patterns sont transposés en français et complétés |
 | [Geng et Trotta, Human-LLM Coevolution](https://arxiv.org/abs/2502.09606) | les mots de ChatGPT reculent une fois publicisés, d'autres progressent | résumés d'articles scientifiques, en anglais |
-| [RTBF, dé-IA-iser nos écrits](https://www.rtbf.be/article/comment-de-ia-iser-nos-ecrits-pour-eviter-la-disparition-des-particularites-des-langues-11756072) | causes (prédiction, RLHF, corpus), uniformisation, manque de transfert vers le français québécois | article de vulgarisation |
+| [RTBF, dé-IA-iser nos écrits](https://www.rtbf.be/article/comment-de-ia-iser-nos-ecrits-pour-eviter-la-disparition-des-particularites-des-langues-11756072) | causes (prédiction, RLHF, corpus), uniformisation des textes | article de vulgarisation |
 
 ## Listes de tics en français
 
@@ -29,7 +27,8 @@ Ces pages sont des guides de rédaction et des blogs, pas des études de corpus.
 ## Ce qui n'a pas été trouvé ou vérifié
 
 - **Aucune étude de corpus en français** qui mesure la fréquence des mots d'IA. La recherche a trouvé des travaux anglais (stylométrie, mots en excès) et une étude de stylométrie sur des textes littéraires français (LaTeCH-CLfL 2026) dont le PDF n'a pas pu être lu. Les listes de ce skill reposent donc sur l'observation de praticiens, recoupée entre sources, et sur la connaissance de la langue.
-- **Le Lexique des règles typographiques en usage à l'Imprimerie nationale** n'a pas été consulté directement. Les règles viennent de sources secondaires et de l'OQLF. Les spécifications d'espace (insécable, fine) varient selon les sources. Le skill recommande l'espace insécable U+00A0 comme défaut sûr.
+- **Le Lexique des règles typographiques en usage à l'Imprimerie nationale** n'a pas été consulté directement. Les règles viennent de Wikipédia, une source secondaire. Les spécifications d'espace (insécable, fine) varient selon les sources. Le skill recommande l'espace insécable U+00A0 comme défaut sûr.
+- **Les conventions de lettre** (appel, formule finale, structure) viennent de la pratique et d'un site de langue. Aucune source institutionnelle française (Académie française, Service-public) n'a pu être consultée. Traite-les comme des usages.
 - **Les chiffres de recruteurs** (pourcentages de candidatures rédigées par IA, de lettres écartées) circulent dans la presse et les blogs. Ils n'ont pas pu être rattachés à une étude, donc le skill ne les reprend pas.
 - **Les calques et faux amis** de [lexique](lexique.md) viennent de la connaissance de la langue et des listes d'anglicismes de l'enseignement. Leur lien avec les sorties de modèles n'a pas été mesuré.
 
