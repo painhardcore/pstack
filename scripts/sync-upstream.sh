@@ -73,9 +73,17 @@ cp -R "$ROOT/agents" "$STAGE/agents"
 cp -R "$ROOT/docs" "$STAGE/docs"
 cp "$POLICY" "$STAGE/upstream-policy.tsv"
 
-awk -F '\t' 'NR > 1 && $1 == "skill" && $3 == "sync" { print $2 }' "$POLICY" |
+awk -F '\t' 'NR > 1 && $1 == "skill" && ($3 == "sync" || $3 == "patch") { print $2 }' "$POLICY" |
 while IFS= read -r name; do
     rsync -a --delete "$SOURCE/skills/$name/" "$STAGE/skills/$name/"
+done
+
+awk -F '\t' 'NR > 1 && $1 == "skill" && $3 == "patch" { print $2 }' "$POLICY" |
+while IFS= read -r name; do
+    patch="$ROOT/patches/$name.patch"
+    [ -f "$patch" ] || { echo "error: missing patches/$name.patch for patch skill $name" >&2; exit 1; }
+    git -C "$STAGE" apply "$patch" ||
+        { echo "error: patches/$name.patch no longer applies to upstream $name; port it again" >&2; exit 1; }
 done
 
 python3 "$ROOT/scripts/adapt_skills.py" "$STAGE"

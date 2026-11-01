@@ -227,6 +227,18 @@ const tail = (r: FileResult) => {
   return kept.join("").trim().split("\n").slice(-30).join("\n");
 };
 
+// SANY prints its parse and semantic errors first. XMLExporter can then crash on the
+// broken module, so keep the start of the output and drop the Java stack frames.
+const sanyErrors = (r: FileResult) =>
+  r.error
+    ? r.error.message
+    : [...plainText(messagesOf(r.output))]
+        .join("")
+        .split("\n")
+        .filter((line) => line.trim() && !/^\s+at /.test(line))
+        .slice(0, 30)
+        .join("\n");
+
 const stopOf = (r: FileResult): Stop => {
   const errors: Part[] = [];
   for (const m of r.error ? [] : messagesOf(r.output))
@@ -306,7 +318,7 @@ export async function check(specFile: string, configFile: string): Promise<Check
       ["-XX:TieredStopAtLevel=1"],
     );
     if (xml.status !== 0)
-      throw new Error(`SANY could not read ${specFile} (exit ${xml.status}):\n${tail(xml)}`);
+      throw new Error(`SANY could not read ${specFile} (exit ${xml.status}):\n${sanyErrors(xml)}`);
     const sany = readSany(fs.readFileSync(xml.stdout, "utf8"));
     const module = path.basename(specFile, ".tla");
     const spec = { ...readSpec({ module, sany, checks }), folder };

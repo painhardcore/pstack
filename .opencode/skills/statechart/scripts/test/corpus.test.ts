@@ -383,6 +383,19 @@ for (const [width, height, config, status, drawn, chart, header] of [
     },
   );
 
+test("a spec that SANY cannot read reports SANY's errors, not a Java stack trace", { skip }, async () => {
+  const base = writeSpec(
+    "NoNaturals",
+    ["---- MODULE NoNaturals ----", "VARIABLE n", "Init == n = 0", "Next == n' = n + 1", "===="],
+    "INIT Init\nNEXT Next\n",
+  );
+  await assert.rejects(check(`${base}.tla`, `${base}.cfg`), (error: Error) => {
+    assert.match(error.message, /Could not find declaration or definition of symbol '\+'/);
+    assert.doesNotMatch(error.message, /^\s+at /m);
+    return true;
+  });
+});
+
 test(
   "check() leaves no statechart- folder in the temp dir when it returns and when it throws",
   { skip },

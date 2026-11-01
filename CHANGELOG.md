@@ -12,6 +12,8 @@
 - Made `poteto-agent` a delegate for playbook steps rather than the runner.
 - Omitted the Cursor-only `make-bot-ui` and `poteto-help` skills.
 - The adapter now drops Cursor's fast-or-standard model speed wording, and the validator rejects current Cursor model slugs.
+- Patched `statechart`: a spec that SANY cannot read now shows SANY's errors instead of only a Java stack trace, and the skill states that `group()` needs `colors` from a fixed list.
+- Added the `patch` sync action: the sync copies upstream, then applies `patches/<name>.patch` and stops if it no longer applies. `statechart` uses it.
 
 ## [1.1.0] - 2026-08-27
 

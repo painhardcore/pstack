@@ -49,7 +49,7 @@ skill	reflect	skip
 skill	setup-pstack	skip
 skill	sharpen	sync
 skill	show-me-your-work	adapt
-skill	statechart	sync
+skill	statechart	patch
 skill	swarm	adapt
 skill	tdd	sync
 skill	teach	adapt
