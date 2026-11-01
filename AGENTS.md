@@ -12,9 +12,14 @@ Use `pstack:poteto-mode` as the entry point for non-trivial engineering work.
 - `teach`, `tdd`, `no-comments`, and `typescript-best-practices` handle focused workflows.
 - `figure-it-out` and `show-me-your-work` handle large or auditable work.
 - `create-verification-skill` and `maintain-verification-skill` build project verification.
+- `create-formal-verification-skill`, `maintain-formal-verification-skill`, and `statechart` build and read formal verification.
+- `benchmark-checklist` vets a measured performance number before you report it.
+- `correct` turns repeated agent mistakes into checks.
+- `in-your-own-words` and `sharpen` restate the goal or deepen a prompt.
+- `ketchup` and `ketchup-video` catch the user up on what changed.
 - `technical-writing`, `unslop`, and `bro` shape communication.
 
-The 21 `principle-*` skills are loaded by direct skills when their rules affect a decision.
+The 24 `principle-*` skills are loaded by direct skills when their rules affect a decision.
 
 ## Portable behavior
 

@@ -13,7 +13,7 @@ mkdir -p \
     "$FIXTURE/agents" \
     "$FIXTURE/docs/guide"
 
-for name in automate-me reflect setup-pstack; do
+for name in automate-me make-bot-ui poteto-help reflect setup-pstack; do
     mkdir -p "$FIXTURE/skills/$name"
 done
 
@@ -34,10 +34,11 @@ printf '%s\n' \
     'Read ~/.cursor/rules/pstack-models.mdc.' \
     'Models: claude-fable-5-thinking-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh, claude-opus-5-thinking-xhigh.' \
     'Set `subagent_type` for each Task call.' \
+    "Pick each subagent's reasoning level and fast or standard speed for the job." \
     > "$FIXTURE/skills/example/SKILL.md"
 
 printf '%s\n' 'reference uses /create-skill' > "$FIXTURE/skills/example/references/example.md"
-for name in automate-me reflect setup-pstack; do
+for name in automate-me make-bot-ui poteto-help reflect setup-pstack; do
     printf '%s\n' '---' "name: $name" 'description: Cursor-only.' '---' > "$FIXTURE/skills/$name/SKILL.md"
 done
 for name in autopilot-full autopilot-stack orchestrate shipping; do
@@ -64,10 +65,11 @@ grep -q 'a strong implementation model' "$FIXTURE/skills/example/SKILL.md"
 grep -q 'a fast available model' "$FIXTURE/skills/example/SKILL.md"
 grep -q 'another judgment-focused available model' "$FIXTURE/skills/example/SKILL.md"
 ! grep -q 'Task call' "$FIXTURE/skills/example/SKILL.md"
+grep -q "Pick each subagent's reasoning level for the job." "$FIXTURE/skills/example/SKILL.md"
 grep -q 'repeat until the exit condition passes' "$FIXTURE/skills/poteto-mode/playbooks/bug-fix.md"
 grep -q '^background: true$' "$FIXTURE/agents/helper.md"
 ! grep -q '^mode:' "$FIXTURE/agents/helper.md"
-for name in automate-me reflect setup-pstack; do
+for name in automate-me make-bot-ui poteto-help reflect setup-pstack; do
     [ ! -e "$FIXTURE/skills/$name" ]
 done
 for name in autopilot-full autopilot-stack orchestrate shipping; do

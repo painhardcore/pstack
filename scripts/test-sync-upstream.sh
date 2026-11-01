@@ -12,7 +12,7 @@ mkdir -p "$UPSTREAM/pstack" "$WORK"
 rsync -a --exclude='.git' "$ROOT/" "$UPSTREAM/pstack/"
 rsync -a --exclude='.git' "$ROOT/" "$WORK/"
 
-for name in automate-me reflect setup-pstack; do
+for name in automate-me make-bot-ui poteto-help reflect setup-pstack; do
     mkdir -p "$UPSTREAM/pstack/skills/$name"
     printf '%s\n' '---' "name: $name" 'description: Upstream-only skill.' '---' > "$UPSTREAM/pstack/skills/$name/SKILL.md"
 done

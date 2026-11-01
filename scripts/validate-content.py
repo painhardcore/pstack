@@ -20,7 +20,9 @@ BANNED = {
     "Cursor subagent field": re.compile(r"subagent_type|run_in_background|environment: [\"']cloud[\"']"),
     "Cursor model slug": re.compile(
         r"claude-fable-5-thinking-max|gpt-5\.6-sol-max|grok-4\.6-fast-xhigh|claude-opus-5-thinking-xhigh"
+        r"|\bgrok-[0-9]|\bcomposer-[0-9]|\bclaude-[a-z]+-[0-9][0-9-]*-(?:medium|x?high|max)\b"
     ),
+    "Cursor model speed": re.compile(r"fast or standard speed"),
     "Graphite workflow": re.compile(r"Graphite|\bgt (?:submit|merge|restack)\b"),
     "missing-helper banner": re.compile(r"helper pending", re.IGNORECASE),
     "host-specific Task syntax": re.compile(r"\bTask (?:tool|subagent|call)s?\b"),
