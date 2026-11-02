@@ -19,6 +19,8 @@ Each phase contains:
 5. The exact verification command or artifact.
 6. The rollback or stop condition.
 
+For behavior a user can observe, one check is a regression check against trunk: run the same load-bearing scenario at trunk and at the phase head. If trunk lacks the feature, record that and check the behavior the phase adds plus the end state the user waits for. A perf check measures the metric at both trunk and head, interleaved, and both sides must produce it.
+
 Order phases so scaffolding and risky unknowns come first. Remove obsolete paths before adding replacements. Keep every phase independently reviewable and green.
 
 ## Delegation
@@ -33,4 +35,4 @@ Local reading, editing, and verification can proceed inside the user's scope. Pu
 
 ## Completion
 
-Finish every phase with its own check. Then run the full baseline-to-target verification on the real artifact. Update the plan when evidence changes the work. Do not edit old claims to hide a pivot; record the new decision.
+Finish every phase with its own check. Run the full check once at the code-ready head. Run it again only for new behavior, a redesign, or a large new diff. A rebase, a conflict resolution, or a minor fix gets one targeted check at the new head, and a wording-only change gets none. A failure that also happens on trunk is recorded against trunk and does not block the phase. Then run the full baseline-to-target verification on the real artifact. Update the plan when evidence changes the work. Do not edit old claims to hide a pivot; record the new decision.

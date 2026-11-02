@@ -7,6 +7,7 @@ This repository tracks one reviewed revision of [cursor/plugins/pstack](https://
 `upstream-policy.tsv` classifies every upstream item:
 
 - `sync` copies a host-neutral skill automatically.
+- `patch` copies the skill like `sync`, then applies `patches/<name>.patch`. Use it for a small local fix to a skill that otherwise tracks upstream.
 - `adapt` preserves the local portable version for manual comparison.
 - `skip` removes a Cursor-only skill or playbook from the distribution.
 
@@ -27,7 +28,7 @@ The script:
 1. Fetches only the pinned commit into a temporary repository.
 2. Verifies every upstream skill, playbook, and agent against `upstream-policy.tsv`.
 3. Starts from the current portable distribution.
-4. Imports only entries marked `sync`.
+4. Imports only entries marked `sync` or `patch`, then applies each `patch` entry's patch. The sync stops if a patch no longer applies.
 5. Runs the adapter and content validator in the temporary tree.
 6. Replaces the live skill, agent, and guide trees only after that candidate passes.
 7. Refreshes `.opencode/skills/` and runs `make check`.
@@ -45,6 +46,19 @@ Portable instructions must:
 - Keep pushes, pull requests, merges, deployments, messages, and remote deletion behind explicit authority.
 
 `make check` runs the adapter fixture twice and fails if the second run changes the result.
+
+## Refresh a patch
+
+When a patch no longer applies, check out cursor/plugins at the new pin in `<plugins>`. Stage the upstream skill, reapply the patch, fix each rejected hunk in its `.rej` file by hand and delete the `.rej` files, then regenerate the patch:
+
+```bash
+rsync -a --delete <plugins>/pstack/skills/statechart/ skills/statechart/
+git add skills/statechart
+git apply --reject patches/statechart.patch
+git diff -- skills/statechart > patches/statechart.patch
+```
+
+Then rerun the sync. Drop the patch and switch the entry back to `sync` once upstream ships the fix. `make check` fails if a shipped `patch` skill no longer contains its patch.
 
 ## Add an upstream item
 

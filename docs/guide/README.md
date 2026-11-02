@@ -28,6 +28,7 @@ Use poteto-mode. The export writes duplicate rows when a retry lands mid-run. Re
 - Use `why` for historical rationale and external constraints.
 - Use `recall` to rebuild recent working context from history the host can access.
 - Use `blast-radius` before a small change with uncertain downstream impact.
+- Use `in-your-own-words` to check the goal before work starts, and `sharpen` to deepen a prompt before you send it.
 
 All delegation skills include an inline fallback. A host without subagents or per-subagent model selection still runs the workflow.
 
@@ -38,7 +39,11 @@ All delegation skills include an inline fallback. A host without subagents or pe
 - Use `swarm` for independent coverage slices.
 - Use `tdd` for a cheap local regression test.
 - Use `create-verification-skill` when the project lacks a user-level verification workflow.
+- Use `create-formal-verification-skill` for a race, invariant, or state machine that tests rarely reach, `maintain-formal-verification-skill` after the covered code changes, and `statechart` to read a TLA+ model as a chart.
+- Use `benchmark-checklist` before you report a performance number.
+- Use `correct` when agents keep repeating the same mistake in a repository.
 - Use `no-comments`, `technical-writing`, and `unslop` before review.
+- Use `ketchup` or `ketchup-video` to catch up on what changed since your last message.
 
 External actions still require authority. A request to edit or review does not authorize a push, pull request, merge, deployment, message, or ticket update.
 

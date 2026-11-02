@@ -11,7 +11,9 @@ from pathlib import Path
 from typing import NoReturn
 
 
-SKIPPED_SKILLS = frozenset({"automate-me", "reflect", "setup-pstack"})
+SKIPPED_SKILLS = frozenset(
+    {"automate-me", "make-bot-ui", "poteto-help", "reflect", "setup-pstack"}
+)
 SKIPPED_PLAYBOOKS = frozenset(
     {"autopilot-full.md", "autopilot-stack.md", "orchestrate.md", "shipping.md"}
 )
@@ -42,6 +44,7 @@ SUBSTITUTIONS = (
     (re.compile(r"gpt-5\.6-sol-max"), "a strong implementation model"),
     (re.compile(r"grok-4\.6-fast-xhigh"), "a fast available model"),
     (re.compile(r"claude-opus-5-thinking-xhigh"), "another judgment-focused available model"),
+    (re.compile(r" and fast or standard speed"), ""),
     (re.compile(r"`Task` calls?"), "subagent calls"),
     (re.compile(r"Task calls?"), "subagent calls"),
     (re.compile(r"Task tool"), "host's subagent tool"),

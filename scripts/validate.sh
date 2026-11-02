@@ -13,6 +13,12 @@ python3 scripts/validate-content.py .
 diff -rq skills .opencode/skills >/dev/null
 echo 'ok: skills/ matches .opencode/skills/'
 
+for name in $(awk -F '\t' 'NR > 1 && $3 == "patch" { print $2 }' upstream-policy.tsv); do
+    git apply --reverse --check "patches/$name.patch" ||
+        { echo "FAIL: skills/$name does not contain patches/$name.patch" >&2; exit 1; }
+done
+echo 'ok: patch skills contain their local patches'
+
 python3 scripts/validate-packaging.py .
 
 for manifest in .codex-plugin/plugin.json .claude-plugin/plugin.json .claude-plugin/marketplace.json; do

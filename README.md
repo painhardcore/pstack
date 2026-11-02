@@ -2,7 +2,7 @@
 
 pstack is a portable adaptation of [Cursor's pstack plugin](https://github.com/cursor/plugins/tree/main/pstack) for Codex, Claude Code, and OpenCode.
 
-The distribution contains 41 skills, 19 playbooks, and host-specific agent definitions for Claude Code and OpenCode. Cursor-only workflows are intentionally omitted.
+The distribution contains 53 skills, 19 playbooks, and host-specific agent definitions for Claude Code and OpenCode. Cursor-only workflows are intentionally omitted.
 
 ## Install
 
@@ -42,15 +42,18 @@ Install the [original plugin](https://github.com/cursor/plugins/tree/main/pstack
 
 ## What is included
 
-The 20 direct skills are:
+The 29 direct skills are:
 
 - `poteto-mode`, `how`, `why`, `recall`, `blast-radius`, `architect`
 - `arena`, `swarm`, `interrogate`, `teach`, `tdd`, `no-comments`
 - `typescript-best-practices`, `figure-it-out`, `show-me-your-work`
 - `create-verification-skill`, `maintain-verification-skill`
+- `create-formal-verification-skill`, `maintain-formal-verification-skill`, `statechart`
+- `benchmark-checklist`, `correct`, `in-your-own-words`, `sharpen`
+- `ketchup`, `ketchup-video`
 - `unslop`, `bro`, `technical-writing`
 
-The other 21 skills are the `principle-*` rules used by those workflows.
+The other 24 skills are the `principle-*` rules used by those workflows.
 
 The 19 playbooks cover investigation, bug fixing, performance, hillclimbing, runtime and trace forensics, features, refactoring, prototypes, visual parity, skill authoring, evals, pull-request babysitting, autonomous runs, session pickup, safe pauses, multi-phase plans, worktree cleanup, and opening pull requests.
 
@@ -61,6 +64,8 @@ Every delegation workflow has an inline fallback. The skills inherit the parent 
 The adaptation removes these upstream skills:
 
 - `automate-me`
+- `make-bot-ui`
+- `poteto-help`
 - `reflect`
 - `setup-pstack`
 
@@ -71,7 +76,7 @@ It also removes these playbooks:
 - `orchestrate`
 - `shipping`
 
-Their current implementations depend on Cursor transcript storage, Cursor model rules, Cursor cloud agents, or Graphite. `figure-it-out`, `show-me-your-work`, `autonomous-run`, `babysit`, and the host's native Git workflow cover the portable parts.
+Their current implementations depend on Cursor transcript storage, Cursor model rules, Cursor cloud agents, Cursor routines and webhooks, Cursor's setup flow, or Graphite. `figure-it-out`, `show-me-your-work`, `autonomous-run`, `babysit`, and the host's native Git workflow cover the portable parts.
 
 ## Project verification skills
 
