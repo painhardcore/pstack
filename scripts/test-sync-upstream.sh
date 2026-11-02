@@ -24,7 +24,7 @@ git -C "$UPSTREAM/pstack" apply --reverse "$ROOT/patches/statechart.patch"
 printf '%s\n' '---' 'name: Bro Upstream' 'description: Synced fixture skill.' '---' '' 'UPSTREAM_SYNC_MARKER' > "$UPSTREAM/pstack/skills/bro/SKILL.md"
 printf '%s\n' '---' 'name: How Upstream' 'description: Adapted fixture skill.' '---' '' 'ADAPT_ENTRY_MUST_NOT_OVERWRITE' > "$UPSTREAM/pstack/skills/how/SKILL.md"
 
-git -C "$UPSTREAM" init --quiet
+git -C "$UPSTREAM" init --quiet --initial-branch=main
 git -C "$UPSTREAM" config user.name pstack-test
 git -C "$UPSTREAM" config user.email pstack-test@example.invalid
 git -C "$UPSTREAM" add pstack

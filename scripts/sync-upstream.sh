@@ -21,7 +21,7 @@ trap 'rm -rf "$TEMP_ROOT"' EXIT HUP INT TERM
 CHECKOUT="$TEMP_ROOT/plugins"
 STAGE="$TEMP_ROOT/stage"
 
-git init --quiet "$CHECKOUT"
+git init --quiet --initial-branch=main "$CHECKOUT"
 git -C "$CHECKOUT" remote add origin "$UPSTREAM_REPO"
 git -C "$CHECKOUT" fetch --quiet --depth 1 origin "$UPSTREAM_COMMIT"
 FETCHED=$(git -C "$CHECKOUT" rev-parse FETCH_HEAD)
