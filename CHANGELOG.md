@@ -5,6 +5,8 @@
 - Documented installing with `npx skills add`, including pinned `vX.Y.Z` releases.
 - CI checks that a pushed `vX.Y.Z` tag matches the manifest version.
 - Removed the `.opencode/skills/` mirror. OpenCode users install the skills with the skills CLI and copy `.opencode/agents/`.
+- `comment-sicko` can now edit files and run shell commands on OpenCode, so it deletes comments there instead of only reporting them.
+- `comment-sicko` diffs against the repository's default branch instead of assuming `main`.
 
 ## [1.2.0] - 2026-11-01
 

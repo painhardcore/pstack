@@ -36,8 +36,8 @@ for agent in .opencode/agents/*.md; do
     grep -q "^name: $name$" "$agent"
     grep -q '^mode: subagent$' "$agent"
 done
-grep -A8 '^permission:' .opencode/agents/comment-sicko.md | grep -q '^  edit: deny$'
-grep -A8 '^permission:' .opencode/agents/comment-sicko.md | grep -q '^  bash: deny$'
+grep -A8 '^permission:' .opencode/agents/comment-sicko.md | grep -q '^  edit: allow$'
+grep -A8 '^permission:' .opencode/agents/comment-sicko.md | grep -q '^  bash: allow$'
 grep -A8 '^permission:' .opencode/agents/comment-sicko.md | grep -q '^  task: deny$'
 echo 'ok: OpenCode agent adapters'
 
