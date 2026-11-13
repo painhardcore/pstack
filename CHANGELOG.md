@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.2.1] - 2026-11-13
 
 - Documented installing with `npx skills add`, including pinned `vX.Y.Z` releases.
 - CI checks that a pushed `vX.Y.Z` tag matches the manifest version.
