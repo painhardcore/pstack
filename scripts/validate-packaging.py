@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -49,6 +50,10 @@ def validate(root: Path) -> list[str]:
             errors.append("Codex capabilities must describe the packaged Skills component only")
         if "agent" in str(interface.get("longDescription", "")).lower():
             errors.append("Codex longDescription advertises agents that are not packaged")
+
+    # `npx skills add painhardcore/pstack@vX.Y.Z` installs from the tag, so a tag must match the manifests.
+    if os.environ.get("GITHUB_REF_TYPE") == "tag" and os.environ.get("GITHUB_REF_NAME") != f"v{version}":
+        errors.append(f"tag {os.environ.get('GITHUB_REF_NAME')} does not match manifest version v{version}")
 
     changelog = (root / "CHANGELOG.md").read_text(encoding="utf-8")
     if f"## [{version}]" not in changelog:

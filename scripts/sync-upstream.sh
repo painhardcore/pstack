@@ -92,7 +92,6 @@ python3 "$ROOT/scripts/validate-content.py" "$STAGE"
 rsync -a --delete "$STAGE/skills/" "$ROOT/skills/"
 rsync -a --delete "$STAGE/agents/" "$ROOT/agents/"
 rsync -a --delete "$STAGE/docs/" "$ROOT/docs/"
-rsync -a --delete "$ROOT/skills/" "$ROOT/.opencode/skills/"
 cp "$SOURCE/LICENSE" "$ROOT/LICENSE"
 
 if [ "${PSTACK_SKIP_FULL_CHECK:-0}" != "1" ]; then
