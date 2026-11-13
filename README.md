@@ -6,6 +6,28 @@ The distribution contains 53 skills, 19 playbooks, and host-specific agent defin
 
 ## Install
 
+### Any agent with the skills CLI
+
+The [skills CLI](https://github.com/vercel-labs/skills#readme) installs pstack for any agent that supports [Agent Skills](https://agentskills.io/specification), including Claude Code, Codex, Cursor, and OpenCode. It needs Node.js. Run it in the project that should get the skills:
+
+```bash
+# Latest master
+npx skills add painhardcore/pstack --skill '*'
+
+# A pinned release
+npx skills add painhardcore/pstack@v1.2.1 --skill '*'
+```
+
+Pick your agent at the prompt, or pass `-a claude-code`, `-a codex`, and so on. Add `-g` to install for all your projects.
+
+An unpinned install follows `master`. `npx skills check` reports new commits and `npx skills update` installs them. A pinned install stays on its tag, and `skills update` never moves it. To upgrade, run `skills add` again with the new tag. Each release tag `vX.Y.Z` matches the plugin version.
+
+Compared with the plugin installs below:
+
+- Install every skill with `--skill '*'`. The workflow skills load the `principle-*` skills and link to files in other skills, so a partial install breaks them.
+- Skills install under plain names, such as `/poteto-mode` or `$poteto-mode`, instead of `pstack:poteto-mode`. Short names such as `how`, `why`, `tdd`, and `teach` can collide with other installed skills.
+- The CLI does not install the `poteto-agent` and `comment-sicko` agents. The skills run those steps inline instead.
+
 ### Codex
 
 ```bash
@@ -40,28 +62,6 @@ cp /path/to/pstack/.opencode/agents/*.md .opencode/agents/
 ```
 
 Ask OpenCode to use the `poteto-mode` skill.
-
-### Any agent with the skills CLI
-
-The [skills CLI](https://github.com/vercel-labs/skills#readme) installs pstack for any agent that supports [Agent Skills](https://agentskills.io/specification), including Claude Code, Codex, Cursor, and OpenCode. It needs Node.js. Run it in the project that should get the skills:
-
-```bash
-# Latest master
-npx skills add painhardcore/pstack --skill '*'
-
-# A pinned release
-npx skills add painhardcore/pstack@v1.2.1 --skill '*'
-```
-
-Pick your agent at the prompt, or pass `-a claude-code`, `-a codex`, and so on. Add `-g` to install for all your projects.
-
-An unpinned install follows `master`. `npx skills check` reports new commits and `npx skills update` installs them. A pinned install stays on its tag, and `skills update` never moves it. To upgrade, run `skills add` again with the new tag. Each release tag `vX.Y.Z` matches the plugin version.
-
-Compared with the plugin install:
-
-- Install every skill with `--skill '*'`. The workflow skills load the `principle-*` skills and link to files in other skills, so a partial install breaks them.
-- Skills install under plain names, such as `/poteto-mode` or `$poteto-mode`, instead of `pstack:poteto-mode`. Short names such as `how`, `why`, `tdd`, and `teach` can collide with other installed skills.
-- The CLI does not install the `poteto-agent` and `comment-sicko` agents. The skills run those steps inline instead.
 
 ### Cursor
 
