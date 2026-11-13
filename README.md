@@ -50,7 +50,7 @@ The [skills CLI](https://github.com/vercel-labs/skills#readme) installs pstack f
 npx skills add painhardcore/pstack --skill '*'
 
 # A pinned release
-npx skills add painhardcore/pstack@v1.2.0 --skill '*'
+npx skills add painhardcore/pstack@v1.2.1 --skill '*'
 ```
 
 Pick your agent at the prompt, or pass `-a claude-code`, `-a codex`, and so on. Add `-g` to install for all your projects.

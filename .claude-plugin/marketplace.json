@@ -11,7 +11,7 @@
       "name": "pstack",
       "source": "./",
       "description": "poteto's engineering skills adapted for Codex, Claude Code, and OpenCode",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Andrei Iurchenkov",
         "email": "andrei@iurchenkov.com"
