@@ -52,8 +52,9 @@ else
 fi
 
 if command -v opencode >/dev/null 2>&1; then
-    XDG_DATA_HOME="$VALIDATE_TEMP/data" XDG_CACHE_HOME="$VALIDATE_TEMP/cache" opencode debug agent poteto-agent >/dev/null
-    XDG_DATA_HOME="$VALIDATE_TEMP/data" XDG_CACHE_HOME="$VALIDATE_TEMP/cache" opencode debug agent comment-sicko >/dev/null
+    XDG_DATA_HOME="$VALIDATE_TEMP/data" XDG_CACHE_HOME="$VALIDATE_TEMP/cache" opencode debug agents > "$VALIDATE_TEMP/agents.json"
+    grep -q '"id": "poteto-agent"' "$VALIDATE_TEMP/agents.json"
+    grep -q '"id": "comment-sicko"' "$VALIDATE_TEMP/agents.json"
     echo 'ok: OpenCode agent discovery'
 else
     echo 'ok: OpenCode CLI absent, discovery skipped'
