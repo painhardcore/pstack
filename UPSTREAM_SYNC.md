@@ -31,7 +31,7 @@ The script:
 4. Imports only entries marked `sync` or `patch`, then applies each `patch` entry's patch. The sync stops if a patch no longer applies.
 5. Runs the adapter and content validator in the temporary tree.
 6. Replaces the live skill, agent, and guide trees only after that candidate passes.
-7. Refreshes `.opencode/skills/` and runs `make check`.
+7. Runs `make check`.
 
 ## Review adapted entries
 
@@ -78,3 +78,4 @@ Choose `sync` only when the file contains no host-specific paths, commands, mode
 3. Update `CHANGELOG.md`.
 4. Bump all three manifest versions together.
 5. Commit the new `UPSTREAM_COMMIT` with the adapted changes.
+6. Once the release commit is on `master`, push an annotated tag `vX.Y.Z` with the manifest version. Pinned `npx skills add` installs read this tag. CI fails if the tag and the manifests disagree.

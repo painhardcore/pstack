@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+- Documented installing with `npx skills add`, including pinned `vX.Y.Z` releases.
+- CI checks that a pushed `vX.Y.Z` tag matches the manifest version.
+- Removed the `.opencode/skills/` mirror. OpenCode users install the skills with the skills CLI and copy `.opencode/agents/`.
+
 ## [1.2.0] - 2026-11-01
 
 - Synced upstream pstack to `cursor/plugins@ae5650f`.

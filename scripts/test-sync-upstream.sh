@@ -39,7 +39,6 @@ grep -q '^name: bro$' "$WORK/skills/bro/SKILL.md"
 ! grep -q 'ADAPT_ENTRY_MUST_NOT_OVERWRITE' "$WORK/skills/how/SKILL.md"
 [ ! -e "$WORK/skills/setup-pstack" ]
 [ ! -e "$WORK/skills/poteto-mode/playbooks/shipping.md" ]
-diff -rq "$WORK/skills" "$WORK/.opencode/skills" >/dev/null
 ! diff -rq "$UPSTREAM/pstack/skills/statechart" "$ROOT/skills/statechart" >/dev/null
 diff -rq "$WORK/skills/statechart" "$ROOT/skills/statechart" >/dev/null
 

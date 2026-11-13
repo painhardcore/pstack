@@ -10,6 +10,8 @@ pstack packages portable engineering workflows for Codex, Claude Code, and OpenC
 | Claude Code | Run `/pstack:poteto-mode <task>`. |
 | OpenCode | Ask it to use the `poteto-mode` skill. |
 
+Skills installed with `npx skills add` have no `pstack:` prefix. Run `/poteto-mode` in Claude Code or `$poteto-mode` in Codex.
+
 Every host can also select a skill implicitly from its `description`.
 
 ## Give a checkable request

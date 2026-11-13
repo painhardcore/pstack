@@ -10,8 +10,6 @@ cd "$ROOT"
 
 python3 scripts/validate-content.py .
 
-diff -rq skills .opencode/skills >/dev/null
-echo 'ok: skills/ matches .opencode/skills/'
 
 for name in $(awk -F '\t' 'NR > 1 && $3 == "patch" { print $2 }' upstream-policy.tsv); do
     git apply --reverse --check "patches/$name.patch" ||

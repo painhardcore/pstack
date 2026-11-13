@@ -26,15 +26,42 @@ Start a new session, then run `/pstack:poteto-mode <task>`.
 
 ### OpenCode
 
-Copy the OpenCode package into a project:
+Install the skills with the [skills CLI](#any-agent-with-the-skills-cli):
 
 ```bash
-cp -R /path/to/pstack/.opencode /path/to/project/
+npx skills add painhardcore/pstack --skill '*' -a opencode
 ```
 
-For user-wide installation, copy `.opencode/skills/` to `~/.config/opencode/skills/` and `.opencode/agents/` to `~/.config/opencode/agents/`.
+Then copy the agents into the project's `.opencode/agents/`, or into `~/.config/opencode/agents/` for every project:
+
+```bash
+mkdir -p .opencode/agents
+cp /path/to/pstack/.opencode/agents/*.md .opencode/agents/
+```
 
 Ask OpenCode to use the `poteto-mode` skill.
+
+### Any agent with the skills CLI
+
+The [skills CLI](https://github.com/vercel-labs/skills#readme) installs pstack for any agent that supports [Agent Skills](https://agentskills.io/specification), including Claude Code, Codex, Cursor, and OpenCode. It needs Node.js. Run it in the project that should get the skills:
+
+```bash
+# Latest master
+npx skills add painhardcore/pstack --skill '*'
+
+# A pinned release
+npx skills add painhardcore/pstack@v1.2.0 --skill '*'
+```
+
+Pick your agent at the prompt, or pass `-a claude-code`, `-a codex`, and so on. Add `-g` to install for all your projects.
+
+An unpinned install follows `master`. `npx skills check` reports new commits and `npx skills update` installs them. A pinned install stays on its tag, and `skills update` never moves it. To upgrade, run `skills add` again with the new tag. Each release tag `vX.Y.Z` matches the plugin version.
+
+Compared with the plugin install:
+
+- Install every skill with `--skill '*'`. The workflow skills load the `principle-*` skills and link to files in other skills, so a partial install breaks them.
+- Skills install under plain names, such as `/poteto-mode` or `$poteto-mode`, instead of `pstack:poteto-mode`. Short names such as `how`, `why`, `tdd`, and `teach` can collide with other installed skills.
+- The CLI does not install the `poteto-agent` and `comment-sicko` agents. The skills run those steps inline instead.
 
 ### Cursor
 
@@ -94,11 +121,11 @@ Their current implementations depend on Cursor transcript storage, Cursor model 
 make check
 ```
 
-The release gate verifies skill frontmatter, links, the OpenCode mirror, manifests, agent definitions, adapter behavior and idempotency, helper references, portable-token policy, and manifest version consistency.
+The release gate verifies skill frontmatter, links, manifests, agent definitions, adapter behavior and idempotency, helper references, portable-token policy, and manifest version consistency. On a `vX.Y.Z` tag push, CI also checks that the tag matches the manifest version.
 
 ## Sync upstream
 
-`UPSTREAM_COMMIT` pins the reviewed Cursor plugin revision. The sync command fetches that exact commit, imports only policy-approved paths, runs the adapter, refreshes the OpenCode mirror, and runs the release gate.
+`UPSTREAM_COMMIT` pins the reviewed Cursor plugin revision. The sync command fetches that exact commit, imports only policy-approved paths, runs the adapter and the release gate.
 
 ```bash
 ./scripts/sync-upstream.sh
